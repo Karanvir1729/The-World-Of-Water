@@ -291,7 +291,7 @@ for(var i = 0; i < countries.length; i++){
   marker.width = 16;
   marker.id = countries[i].name
   marker.style.position = 'absolute';
-  countries[i].markerY += 60
+  countries[i].markerY += 67
   marker.style.left = countries[i].markerX + "px";
   marker.style.top = countries[i].markerY + "px";
   marker.style.opacity = "0.25"
@@ -338,18 +338,37 @@ document.addEventListener('mousemove', event => {
 
 //Displays width of the window
 window.addEventListener('load', event =>{
-//console.log(window.innerWidth)
-  if (window.innerWidth > 1425){
-    for(let i=0; i<countries.length; i++){
-      if (countries[i].markerX - (countries[i].markerX + (window.innerWidth - 1425)) != 0){
-        countries[i].markerX += (window.innerWidth - 1425)
-        document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
-      }
-    }
+  map.width = window.innerWidth
+  map.height = window.innerWidth / 2
+
+  var scaleX = map.width / 1425
+  var scaleY = map.height / 713
+  for (var i=0; i<countries.length; i++){
+    countries[i].markerY -= map.y
+    countries[i].markerX *= scaleX
+    countries[i].markerY *= scaleY
+    countries[i].markerY += map.y
+    document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
+    document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
   }
 
 });
 
+window.addEventListener('resize', event =>{ 
+
+  var scaleX = map.width / window.innerWidth
+  var scaleY = map.height / (window.innerWidth / 2)
+  for (var i=0; i<countries.length; i++){
+    countries[i].markerY -= map.y
+    countries[i].markerX *= scaleX
+    countries[i].markerY *= scaleY
+    countries[i].markerY += map.y
+    document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
+    document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
+  }
+  map.width = window.innerWidth
+  map.height = window.innerWidth / 2
+});
 document.addEventListener('click', event => {
   console.log(event.pageX - 6, event.pageY - 80);
 });
@@ -362,7 +381,7 @@ document.addEventListener('dblclick', event => {
     for (i = 0; i < countries.length; i++){
       countries[i].markerX *= 2
       countries[i].markerY *= 2
-      countries[i].markerY -= 120
+      countries[i].markerY -= 134
       document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
       document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
     }
@@ -370,9 +389,9 @@ document.addEventListener('dblclick', event => {
     map.style.zoom = 1
     window.scrollTo(event.pageX / 2 - window.innerWidth / 2, event.pageY / 2 - window.innerHeight / 2)
     for (i = 0; i < countries.length; i++){
-      countries[i].markerY += 120
-      countries[i].markerX /= 2
-      countries[i].markerY /= 2
+      countries[i].markerY += 134
+      countries[i].markerX *= 0.5
+      countries[i].markerY *= 0.5
       document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
       document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
     }

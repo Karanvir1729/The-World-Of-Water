@@ -1,31 +1,38 @@
 var todaysDate = new Date()
 var month = todaysDate.getMonth()
 
-const header = document.getElementById("header")
+const header = document.getElementById("head")
 const goalHeader = document.createElement("h2")
+goalHeader.id = "header"
+
+header.style.width = window.innerWidth * 0.75 + "px"
+header.style.left = (window.innerWidth / 2) - (window.innerWidth / 2.75) + "px"
 
 const buttons = document.getElementById("buttons")
 const manuallyEnter = document.getElementById("manual")
+const activity = document.getElementById("activity")
 const inputs = document.getElementById("inputs")
+
+manuallyEnter.style.left = (window.innerWidth / 2) - 220 + "px"
+activity.style.left = (window.innerWidth / 2) + 10 + "px"
 
 function random(start, end){
   end -= start
   return Math.round(Math.random() * end + start)
 }
 
-function updateWaterusage(usage) {
+function updateWaterUsage(usage) {
   var waterRemaining = dailyGoal - usage
   return waterRemaining
 }
-manuallyEnter.addEventListener("click", () => {
-  var waterUsage = document.createElement("input")
-  waterUsage.placeholder = "Enter in water usage"
-  var submit = document.createElement("button")
-  submit.innerHTML = "submit"
-  inputs.appendChild(waterUsage)
-  inputs.appendChild(submit)
-  upadteWaterusage(waterUsage.value)
+
+window.addEventListener("load", () => {
+  document.getElementById("banner").width = window.innerWidth
+  document.getElementById("banner").height = window.innerHeight / 3
 })
+const waterUsage = document.createElement("input")
+const submit = document.createElement("button")
+submit.innerHTML = "submit"
 
 //Calculates the water goal in Liters based on the months
 //Warmer months have larger water amounts while colder has fewer water amounts
@@ -39,3 +46,24 @@ if (0 <= month && month <= 2){
 
 goalHeader.innerHTML = "Today's Goal: " + dailyGoal + "L"
 header.appendChild(goalHeader)
+
+manuallyEnter.addEventListener("click", () => {
+  
+  waterUsage.placeholder = "Enter in water usage"
+  
+
+  if (inputs.childElementCount < 1){
+    inputs.appendChild(waterUsage)
+    inputs.appendChild(submit)
+  }
+})
+
+
+submit.addEventListener("click", () => {
+  dailyGoal = updateWaterUsage(waterUsage.value)
+  console.log(dailyGoal)
+})
+
+document.addEventListener("click", event => {
+  console.log(event.pageX, event.pageY)
+})
