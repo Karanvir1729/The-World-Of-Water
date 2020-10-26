@@ -1,3 +1,36 @@
+#leftoption, #rightoption {
+    width: 50%;
+    background: blue;
+    position: realtive;
+}
+
+#leftoption:hover, #rightoption:hover{
+  background: #64acff;
+}
+.wipeRight {
+  animation: wipeRight 1s;
+  transform: translate(0%)
+}
+
+.wipeLeft {
+  animation: wipeLeft 1s;
+  transform: translate(0%)
+}
+
+@keyframes wipeRight{
+  to {transform: translate(200%)}
+}
+
+@keyframes wipeLeft{
+  to {transform: translate(-200%)}
+}
+
+.center {
+  text-align:center;
+  font-size: 48px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+}
 
 #header {
   color: rgb(72, 72, 253);
@@ -6,90 +39,15 @@
   text-shadow: 1px 3px 0px #8bdaff,
                2px 5px 0px #64acff;
 }
-
-#inputs {
-  position: relative;
-  top: 50px;
-}
-
-#head {
-  position: absolute;
-  top: 300px;
-  width: 300px;
-  height: 200px;
-  background-color: rgb(179, 193, 255);
-
-}
-
-#inputs {
-  position: absolute;
-  top: 650px;
-  left: 250px;
-}
-#header {
-  text-align: center;
-}
-
-#manual {
-  position: absolute;
-}
-#activity {
-  position: absolute;
-}
-.button {
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: 16px;
-  color:rgb(106, 163, 137);
-  font-weight: 1000;
-  text-transform: uppercase;
-  font-family: inherit;
-}
-
-.button {
-  padding: 1em 2em;
-  border: 2px solid rgb(106, 163, 137);
-  border-radius: 1em;
-  background: rgb(205, 255, 232);
-  transform-style: preserve-3d;
-  transition: all 175ms cubic-bezier(0, 0, 1, 1);
-}
-.button::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgb(150, 232, 195);
-  border-radius: inherit;
-  box-shadow: 0 0 0 2px rgb(121, 186, 156), 0 0.75em 0 0 rgb(106, 163, 137);
-  transform: translate3d(0, 0.75em, -1em);
-  transition: all 175ms cubic-bezier(0, 0, 1, 1);
-}
-
-
-.button:hover {
-  background: rgb(164, 255, 213);
-  transform: translate(0, 0.375em);
-}
-
-.button:hover::before {
-  transform: translate3d(0, 0.75em, -1em);
-}
-
-.button:active {
-  transform: translate(0em, 0.75em);
-}
-
-.button:active::before {
-  transform: translate3d(0, 0, -1em);
-  box-shadow: 0 0 0 2px rgb(121, 186, 156), 0 0.25em 0 0 rgb(121, 186, 156);
-
+	
+#submit{
+  margin: 12px;
+  border-radius: 18px;
+  background-color: #1c89ff;
+  border: solid 1px transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  width: 200px;
+  height: 36px;
 }
