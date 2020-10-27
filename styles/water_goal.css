@@ -1,3 +1,17 @@
+#activities{
+  visibility: hidden;
+}
+
+form{
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+label{
+  font-size: 25px;
+}
 #leftoption, #rightoption {
     width: 50%;
     background: blue;

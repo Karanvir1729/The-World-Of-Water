@@ -22,6 +22,15 @@ if (0 <= month && month <= 2){
   var dailyGoal = random(225, 275)
 }
 
+const meter = document.getElementById("meter")
+var waterUsed = 0
+meter.style.display = "block"
+meter.style.margin = "auto"
+meter.high = 0
+meter.optimum = 0.33
+meter.low = 0.66
+meter.max = dailyGoal
+meter.value = waterUsed
 
 const leftOption = document.getElementById("leftoption")
 const rightOption = document.getElementById("rightoption")
@@ -66,16 +75,21 @@ leftOption.addEventListener("click", () => {
     }, 1000)
 })
 
+const form = document.getElementById('activities')
 rightOption.addEventListener("click", () => {
   leftOption.remove()
   rightOption.classList.add("wipeLeft")
-  setTimeout(() => {rightOption.remove()}, 1000)
+  setTimeout(() => {
+    rightOption.remove()
+    goalHeader.remove()
+    form.style.visibility = "visible"
+  }, 1000)
 })
 
 const container = document.getElementById("container")
 const goalHeader = document.createElement("h2")
 goalHeader.style.position = "absolute"
-goalHeader.style.top = window.innerHeight / 5 + "px"
+goalHeader.style.top = window.innerHeight / 8 + 110  + "px"
 goalHeader.style.left = window.innerWidth / 2 - 140 + 'px'
 goalHeader.style.fontSize = "36px"
 goalHeader.innerHTML = "Water Goal " + dailyGoal + "L"
@@ -85,20 +99,13 @@ container.appendChild(goalHeader)
 
 submit.addEventListener("click", () => {
   if (waterUsage.value < 0 || isNaN(waterUsage.value)){
-    const warning = document.createElement("p")
-    warning.innerHTML = "Enter postive numbers only"
-    warning.style.color = "red"
-    warning.style.position = "relative"
-    warning.style.top = "50px"
-    warning.style.display = "block"
-    warning.style.margin = "auto"
-    if (container.childElementCount < 4){
-      container.appendChild(warning)
-    }
+    alert("Enter only positive integers")
     return 
   }
   if (confirm("Are you sure that you used " + waterUsage.value + "L of water.\nOnce this is entered it cannot be changed")){
     dailyGoal = dailyGoal - waterUsage.value
+    waterUsed += waterUsage.value
+    meter.value = waterUsed
   }
-  console.log(dailyGoal)
+  
 })

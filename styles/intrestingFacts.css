@@ -1,0 +1,141 @@
+h1 {
+  font-size: 52px;
+  color: blue;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  color: blueviolet;
+  text-align: left;
+}
+
+p{
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+figure {
+  background-color: white;
+  display: block;
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+  font-size:16px;
+  font-size:1vw;
+  width: 30em;
+  padding-bottom: 40em;
+}
+figcaption {
+  font-size:1rem;
+  text-align:center;
+  color:rgb(255, 255, 255);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:40%;
+  z-index:2;
+}
+svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+///////////////////
+figure2 {
+  background-color: white;
+  display: block;
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+  font-size:16px;
+  font-size:1vw;
+  width: 30em;
+  padding-bottom: 40em;
+}
+figcaption2 {
+  font-size:1rem;
+  text-align:center;
+  color:rgb(255, 255, 255);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:40%;
+  z-index:2;
+}
+svg2 {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+circle {
+	fill:rgba(0,0,0,0);
+  stroke-width:31.8309886184;
+  stroke-dasharray: 0,0,0,100;
+  stroke-dashoffset: 25;
+  -webkit-animation: pie1 3s infinite ease both;
+  animation: pie1 6s infinite ease both;
+}
+.pie1 {
+  stroke:hsl(180,70%,30%);
+}
+.pie2 {
+  stroke:hsl(180,70%,50%);
+  -webkit-animation-name: pie2;
+  animation-name: pie2;
+}
+.pie3 {
+  stroke:hsl(180,70%,30%);
+}
+.pie4 {
+  stroke:hsl(180,70%,50%);
+  -webkit-animation-name: pie2;
+  animation-name: pie4;
+}
+/*
+ pie percentage made by stroke-dasharray.
+ stroke-dasharray format is...
+
+ keyframe 100% : 0 offset this-percentage rest
+
+ I added keyframe 50% for infinite presentation.
+*/
+
+/* 1st pie is 40% */
+@-webkit-keyframes pie1 {
+  50%,100% {stroke-dasharray: 10,60,0,0;}
+}
+@keyframes pie1 {
+  50%,100% {stroke-dasharray: 40,60,0,0;}
+}
+/* 2nd pie is 30% */
+@-webkit-keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,40,90,90;}
+}
+@keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,40,90,90;}
+}
+
+/* 2nd pie is 30% */
+@-webkit-keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,40,25,90;}
+}
+@keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,40,25,90;}
+}
+/* 2nd pie is 30% */
+@-webkit-keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,40,75,90;}
+}
+@keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,40,75,90;}
+}
