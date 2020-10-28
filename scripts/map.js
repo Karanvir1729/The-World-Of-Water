@@ -190,93 +190,86 @@ var uruguay = new Country("Uruguay",95.30, 94.59, 490, 547)
 countries.push(uruguay)
 
 //CHANGE THE WATER PERCENT VALUES 
-var south_africa = new Country("South Africa",95.30, 94.59, 802,532)
-countries.push(south_africa)
-var madagascar = new Country("Madagascar",95.30, 94.59, 898,493)
+var south_africa = new Country("South Africa",90.7, 80.3, 802,532)
+countries.push(south_africa)//done 
+var madagascar = new Country("Madagascar",85.82, 67.23, 898,493)//done 
 countries.push(madagascar)
-var namibia = new Country("Namibia",95.30, 94.59, 784, 503)
+var namibia = new Country("Namibia",90.30, 96.59, 784, 503)//done 
 countries.push(namibia)
-var angola = new Country("Angola",95.30, 94.59, 779, 462)
+var angola = new Country("Angola",71.23, 61.45, 779, 462)//done 
 countries.push(angola)
-var dRcongo = new Country("Congo",95.30, 94.59, 806, 423)
+var dRcongo = new Country("DR of Congo",84.3, 80.2, 806, 423)//done
 countries.push(dRcongo)
-var botswana = new Country("Botswana",95.30, 94.59, 806, 492)
+var botswana = new Country("Botswana",85.22, 83.22, 806, 492)//done
 countries.push(botswana)
-var zimbabwe = new Country("Zimbabwe",95.30, 94.59, 829, 496)
+var zimbabwe = new Country("Zimbabwe",94.5, 94.00, 829, 496)//done
 countries.push(zimbabwe)
-var zambia = new Country("Zambia",95.30, 94.59, 835, 462)
+var zambia = new Country("Zambia",93.05, 92.05 , 835, 462)//done
 countries.push(zambia)
-var malawi = new Country("Malawi",95.30, 94.59, 845, 469)
+var malawi = new Country("Malawi",83.23, 80.23, 845, 469)//done
 countries.push(malawi)
-var mozambique = new Country("Mozambique",95.30, 94.59, 848, 484)
+var mozambique = new Country("Mozambique",84.59,80.12 , 848, 484)//done
 countries.push(mozambique)
-var uRtanzania= new Country("Tanzania",95.30, 94.59, 848, 430)
+var uRtanzania= new Country("Tanzania",84.56, 60.23 , 848, 430)//done
 countries.push(uRtanzania)
-var kenya = new Country("Kenya",95.30, 94.59, 858, 413)
-countries.push(kenya)
-var uganda = new Country("Uganda",95.30, 94.59, 843, 407)
-countries.push(uganda)
-var argentina = new Country("Argentina",95.30, 94.59, 457, 558)
+var kenya = new Country("Kenya",84.30, 80.59, 858, 413)
+countries.push(kenya)//done
+var uganda = new Country("Uganda",74.42, 69.01, 843, 407)
+countries.push(uganda)//done
+var argentina = new Country("Argentina",98.79, 99.56, 457, 558)//done
 countries.push(argentina)
-var chile = new Country("Chile",95.30, 94.59, 435, 518)
-countries.push(chile)
-var bolivia = new Country("Bolivia",95.30, 94.59, 455, 478)
-countries.push(bolivia)
-var paraguay = new Country("Paraguay",95.30, 94.59, 476, 504)
+var chile = new Country("Chile",97.30, 98.59, 435, 518)
+countries.push(chile)//done
+var bolivia = new Country("Bolivia",95.20, 99.80, 455, 478)
+countries.push(bolivia)//done
+var paraguay = new Country("Paraguay",96.94,100.00, 476, 504)//done
 countries.push(paraguay)
 var peru = new Country("Peru",95.30, 94.59, 415, 459)
-countries.push(peru)
-var ecuador = new Country("Ecuador",95.30, 94.59, 404, 420)
-countries.push(ecuador)
-var colombia = new Country("Colombia",95.30, 94.59, 417, 404)
+countries.push(peru)//done
+var ecuador = new Country("Ecuador",92.78, 87.69, 404, 420)
+countries.push(ecuador)//done
+var colombia = new Country("Colombia",100.00,98.90 , 417, 404)//done
 countries.push(colombia)
-var venezuela = new Country("Venezuela",95.30, 94.59, 444, 385)
-countries.push(venezuela)
-var guyana = new Country("Guyana",95.30, 94.59,480, 392)
-countries.push(guyana)
-var suriname = new Country("Suriname",95.30, 94.59, 490, 399
+var venezuela = new Country("Venezuela",95.72, 95.72, 444, 385)
+countries.push(venezuela)//done
+var guyana = new Country("Guyana",100.00,92.45 ,480, 392)
+countries.push(guyana)//done
+var suriname = new Country("Suriname",98.39,97.43 , 490, 399
 )
-countries.push(suriname)
-var australia = new Country("Australia",95.30, 94.59, 1246, 501)
-countries.push(australia)
-var newZealand = new Country("New Zealand",95.30, 94.59,1391, 588)
+countries.push(suriname)//done
+var australia = new Country("Australia",100.00, 100.00, 1246, 501)
+countries.push(australia)//done
+var newZealand = new Country("New Zealand",100.00, 100.00,1391, 588)//done
 countries.push(newZealand)
-var papuaNewGuinea = new Country("Papua New Guinea",95.30, 94.59,1284, 436)
+var papuaNewGuinea = new Country("Papua New Guinea",83.23, 85.84, 1284, 436)//done
 countries.push(papuaNewGuinea)
-var indonasia = new Country("Indonasia",95.30, 94.59,1262, 438)
+var indonasia = new Country("Indonasia",93.05, 92.54,1262, 438)//done
 countries.push(indonasia)
 var fGuiana = new Country("French Guiana",95.30, 94.59,499, 399)
 countries.push(fGuiana)
-var malaysia = new Country("Malaysia",95.30, 94.59,1164, 405)
+var malaysia = new Country("Malaysia",99.37, 99.09,1164, 405)//done
 countries.push(malaysia)
-var philippines = new Country("Philippines",95.30, 94.59,1205, 386)
+var philippines = new Country("Philippines",96.97, 96.97,1205, 386)//done
 countries.push(philippines)
 
-var congo = new Country("Congo",95.30, 94.59,775, 417)
-countries.push(congo)
-var gabon = new Country("Gabon",95.30, 94.59,758, 421)
-countries.push(gabon)
-var cameroon = new Country("Cameroon",95.30, 94.59,758, 398)
-countries.push(cameroon)
+var congo = new Country("Congo",85.22, 82.22,775, 417)
+countries.push(congo)//done
+var gabon = new Country("Gabon",90.23, 89.59,758, 421)
+countries.push(gabon)//done
+var cameroon = new Country("Cameroon",85.30, 77.02,758, 398)
+countries.push(cameroon)//done
 
-
-
-
-
-
-
-
-var benin = new Country("Benin",95.30, 94.59,721, 380)
-countries.push(benin)
-var togo = new Country("Togo",95.30, 94.59,717, 389)
-countries.push(togo)
-var ghana = new Country("Ghana",95.30, 94.59,706, 392)
-countries.push(ghana)
-var cote = new Country("Côte D’Ivoire",95.30, 94.59, 686,392)
+var benin = new Country("Benin",75.30, 76.89,721, 380)
+countries.push(benin)//done
+var togo = new Country("Togo",89.45, 89.45,717, 389)
+countries.push(togo)//done
+var ghana = new Country("Ghana",88.52, 75.56,706, 392)
+countries.push(ghana)//done
+var cote = new Country("Côte D’Ivoire",89.45, 89.52, 686,392)//done
 countries.push(cote)
-var liberia = new Country("Liberia",95.30, 94.59,673, 394)
-countries.push(liberia)
-var sierra  = new Country("Sierra Leone",95.30, 94.59,665,388)
+var liberia = new Country("Liberia",83.29,76.56 ,673, 394)
+countries.push(liberia)//done
+var sierra  = new Country("Sierra Leone",75.30, 74.59,665,388)
 countries.push(sierra )
 
 
@@ -284,7 +277,6 @@ var guinea = new Country("Guinea",95.30, 94.59,661,378)
 countries.push(guinea)
 var guineaB = new Country("Guinea-Bissau",95.30, 94.59,651,370)
 countries.push(guineaB)
-
 for(var i = 0; i < countries.length; i++){
   var marker = document.createElement("img");
   marker.src = "images/marker.png";
@@ -355,14 +347,14 @@ window.addEventListener('load', event =>{
 });
 
 window.addEventListener('resize', event =>{ 
-
-  var scaleX = map.width / window.innerWidth
-  var scaleY = map.height / (window.innerWidth / 2)
+  var scaleX = window.innerWidth / map.width
+  var scaleY = (window.innerWidth / 2) / map.height
   for (var i=0; i<countries.length; i++){
     countries[i].markerY -= map.y
     countries[i].markerX *= scaleX
     countries[i].markerY *= scaleY
     countries[i].markerY += map.y
+    console.log(map.y)
     document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
     document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
   }
