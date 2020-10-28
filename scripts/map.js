@@ -283,7 +283,7 @@ for(var i = 0; i < countries.length; i++){
   marker.width = 16;
   marker.id = countries[i].name
   marker.style.position = 'absolute';
-  countries[i].markerY += 67
+  countries[i].markerY += 57
   marker.style.left = countries[i].markerX + "px";
   marker.style.top = countries[i].markerY + "px";
   marker.style.opacity = "0.25"
@@ -373,7 +373,7 @@ document.addEventListener('dblclick', event => {
     for (i = 0; i < countries.length; i++){
       countries[i].markerX *= 2
       countries[i].markerY *= 2
-      countries[i].markerY -= 134
+      countries[i].markerY -= 114
       document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
       document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
     }
@@ -381,7 +381,7 @@ document.addEventListener('dblclick', event => {
     map.style.zoom = 1
     window.scrollTo(event.pageX / 2 - window.innerWidth / 2, event.pageY / 2 - window.innerHeight / 2)
     for (i = 0; i < countries.length; i++){
-      countries[i].markerY += 134
+      countries[i].markerY += 114
       countries[i].markerX *= 0.5
       countries[i].markerY *= 0.5
       document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
