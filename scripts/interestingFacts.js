@@ -16,3 +16,14 @@ image.style.width= "1%"
 document.getElementById('numberOfLives').appendChild(image);
 
 }
+
+const stressMap = document.getElementById("contaminatedWater");
+const highlight = document.getElementById("highlight")
+  highlight.style.left = 777  + "px"
+  highlight.style.top = 4350 + "px"
+
+  console.log(stressMap.x, stressMap.y)
+
+document.addEventListener('click', event => {
+  console.log(event.pageX - 6, event.pageY - 80);
+});
