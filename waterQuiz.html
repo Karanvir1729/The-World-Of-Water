@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <meta name='viewport' 
+     content='width=device-width, initial-scale=0.75, maximum-scale=0.75, 
+     user-scalable=0' >
+  <head>
+  <style>
+  
+ </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>The World Of Water</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="styles/waterQuiz.css" rel="stylesheet" type="text/css" />
+    <h1 id="title">The World of Water</h1>
+    <ul id = "nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="waterQuiz.html">Water Quiz</a></li>
+      <li><a href="water_goal.html">Daily Water Goal</a></li>
+       <li><a href="interestingFacts.html">Interesting Facts</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="citations.html">Citations</a></li>
+    </ul>
+  </head>
+  
+  <body>     
+  <form >
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value=""placeholder="Type your name"><br>
+  <input type="reset">
+</form>
+<h1> What type of shower do you use?</h1>
+     <img src="images/lowFlowShowerHead.jpg",  width = 40%, style="display:block;margin:auto"> 
+     <form>
+     <input type="radio" id="lowFlow" name="showerType" value="1.5" checked="checked">
+      <label for="lowFlow">Low Flow</label><br>
+      <input type="radio" id="highFlow" name="showerType" value="2.5">
+      <label for="highFlow">High Flow</label><br>
+      <input type="radio" id="noShower" name="showerType" value="0">
+      <label for="noShower">I don't shower</label><br>
+      </form> 
+   
+    <h1> How long do you spend in shower on average?</h1>
+    <h3>Click Counter To increase</h3>
+    <button id="clickToIncreaseShowerTime">+</button>
+    <button id="clickToDecreaseShowerTime">-</button>
+    <p id= "currentCountShowerTime"> Current Count is:  </p>
+    <p id= "numberOfMins" ></p>
+
+     <h1> How often do you shower in a week?</h1>
+     <button id="clickToIncreaseShower">+</button>
+      <button id="clickTodecreaseShower">-</button>
+      <p id= "currentShowerCount"> Current Count is:  </p>
+      <p id= "numberOfShowers" ></p>
+    <h1> How many times do you take baths in a week?</h1>
+    <button id="clickToIncreaseBaths">+</button>
+      <button id="clickTodecreaseBaths">-</button>
+      <p id= "currentBathCount"> Current Count is:  </p>
+     <input type="text" id="percentFilled" name="volumeOfTub" value="0"placeholder="How much do you fill your bath tub by as compared to a usual tub in % (for example, 1 is 100%)?"size="100"><br>
+ <h1> For how long are your toilet sinks running in a day (This includes brushing, washing hands, ect.)?</h1>
+ <input type="text" id="timeSinksAreRunning" name="sinkWaterUsage"placeholder="time in mins."><br>
+     <h1> How many times do you flush in a day?</h1>
+     <button id="clickToIncreaseFlush">+</button>
+      <button id="clickTodecreaseFlush">-</button>
+      <p id= "currentFlushCount"> Current Count is:  </p>
+      <p id= "numberOfFlushes" ></p>
+     <h1> How do you wash your dishes?</h1>
+     <form>
+     <input type="radio" id="washMethord" name="washMethord" value="sinkWash">
+      <label for="sinkWash">Sink wash</label><br>
+      <input type="radio" id="washMethord" name="washMethord" value="dishWasher">
+      <label for="dishWasher">Dish Washer</label><br>
+      <input type="radio" id="washMethord" name="washMethord" value="none">
+      <label for="none">Not Applicable</label>
+      </form> 
+    
+      
+     <h1> How many times do you do laundry in a week?</h1>
+     <button id="clickToIncreaseLaundry">+</button>
+      <button id="clickTodecreaseLaundry">-</button>
+      <p id= "currentLaundryCount"> Current Count is:  </p>
+      <p id= "numberOfLaundry" ></p>
+     <h1> What is the size of your lawn (in m^2)? </h1>
+     <input type="text" id="sizeOfLawn"placeholder="Enter area in m^2" >
+      <h1> What is the volume of your swimming pool?</h1>
+      <input type="text" id="volume of swimmingPool" placeholder="Enter volume in gallons">
+      <form>
+      <h1> What is your general diet?</h1> 
+      <input type="radio" id="vegan" name="diet" value="vegan">
+      <label for="vegan">Vegan</label><br>
+      <input type="radio" id="vegetarian" name="diet" value="vegetarian">
+      <label for="vegetarian">Vegetarian</label><br>
+      <input type="radio" id="other" name="diet" value="other">
+      <label for="other">Other (must include meat)</label>
+    </form> 
+    <br>
+    <button id="done"> I am done!</button>
+    
+    <script src="scripts/resultOfQuiz.js"></script>
+    <script src="scripts/waterQuiz.js"></script>
+  </body>
+</html>

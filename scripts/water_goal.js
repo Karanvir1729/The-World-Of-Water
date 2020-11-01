@@ -243,7 +243,7 @@ select.addEventListener("click", () => {
       }
       break;
     case 3:
-      var frequency = prompt("When you dlush the toilet it uses approximately 5L of water. Enter the number of times you flushed")
+      var frequency = prompt("When you flush the toilet it uses approximately 5L of water. Enter the number of times you flushed")
       while (frequency < 0 || isNaN(frequency)){
         frequency = prompt("Please enter a positive integer")
       }

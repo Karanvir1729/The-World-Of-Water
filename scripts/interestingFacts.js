@@ -1,10 +1,4 @@
-const check = document.getElementById('check')
 
-check.addEventListener("click", () => {
-  var outputText= "hi"
-  var text = document.getElementById('textAfterClick')
-  text.innerHTML = "hi"
-});
 
 
 
@@ -19,9 +13,9 @@ document.getElementById('numberOfLives').appendChild(image);
 
 const stressMap = document.getElementById("contaminatedWater");
 const highlight = document.getElementById("highlight")
-  highlight.style.left = 777  + "px"
-  highlight.style.top = 4350 + "px"
-
+  highlight.style.left = 648  + "px"
+  highlight.style.top = 5779 + "px"
+  
   console.log(stressMap.x, stressMap.y)
 
 document.addEventListener('click', event => {

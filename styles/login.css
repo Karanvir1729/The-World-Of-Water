@@ -167,3 +167,7 @@ body {
   }
 }
 
+#warning {
+  color: rgb(255, 230, 0);
+  font-size: 12px;
+}
