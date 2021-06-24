@@ -1,50 +1,17 @@
-var charities = []
-var events = []
+//Muhammad's file 
+//Creates charity objects for each charity
+//Each object recieves the image which will be clicked, this close button, as well as the infobox
 
-var unicef = {
-  infoBox:document.getElementById("unicef"),
-  close:document.getElementsByClassName("close")[0],
-  image:document.getElementById("unicefImage"),
-  appear:function(){
-    this.infoBox.style.display = "block"
-  }
-  remove:function(){
-    this.infoBox.style.display = "none"
-  }
-}
-charities.push(unicef)
+console.log("Creating charity objects")
+var unicef = new Charity(document.getElementById("unicef"), document.getElementById("unicefImage"), document.getElementsByClassName("close")[0])
 
-var pureWaterForTheWorld = {
-  infoBox:document.getElementById("purewaterfortheworld"),
-  close:document.getElementsByClassName("close")[1],
-  image:document.getElementById("purewaterfortheworldImage"),
-  appear:function(){
-    this.infoBox.style.display = "block"
-  }
-}
-charities.push(pureWaterForTheWorld)
+var pureWaterForTheWorld = new Charity(document.getElementById("purewaterfortheworld"), document.getElementById("purewaterfortheworldImage"), document.getElementsByClassName("close")[1])
 
-var waterForGood = {
-  infoBox:document.getElementById("waterForGood"),
-  close:document.getElementsByClassName("close")[2],
-  image:document.getElementById("waterForGoodImage"),
-  appear:function(){
-    this.infoBox.style.display = "block"
-  }
-}
-charities.push(waterForGood)
+var waterForGood = new Charity(document.getElementById("waterForGood"), document.getElementById("waterForGoodImage"), document.getElementsByClassName("close")[2])
 
-charities[0].appear()
-window.onclick = (event) => {
-  for(var i in charities){
-    if (event.target == charities[i].infoBox){
-      charities[i].style.display = "none"
-    }
+var charityWater = new Charity(document.getElementById("charityWater"), document.getElementById("charityWaterImage"), document.getElementsByClassName("close")[3])
 
-    
+var miya = new Charity(document.getElementById("miya"), document.getElementById("miyaImage"), document.getElementsByClassName("close")[4])
 
-    charities[i].close.onclick = function() {
-      charities[i].infoBox.style.display = "none"
-    }
-  }
-}
+var waterorg = new Charity(document.getElementById("waterorg"), document.getElementById("waterorgImage"), document.getElementsByClassName("close")[5])
+console.log("Charity objects created")

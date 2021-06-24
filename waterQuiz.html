@@ -12,7 +12,14 @@
     <title>The World Of Water</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
     <link href="styles/waterQuiz.css" rel="stylesheet" type="text/css" />
-    <h1 id="title">The World of Water</h1>
+    <header>
+        <h1 id="title">The World of Water</h1>
+        <div id="buttons">
+          <a href='login.html'><button id="login" class="navbuttons">Login</button></a>
+          <a href="sign-up.html"><button id="sign-up" class="navbuttons">Sign-up</button></a>
+          <a href="donation.html"><button id="donate" class="navbuttons">Donate</button></a>
+        </div>
+    </header>
     <ul id = "nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="map.html">Map</a></li>
@@ -24,69 +31,97 @@
     </ul>
   </head>
   
-  <body>     
+  <body>
+    <center>  
+      <h1> Please answer all the questions that apply to you. Feel free to skip questions which do not apply to you.</h1>
   <form >
   <label for="name">Name:</label><br>
   <input type="text" id="name" name="name" value=""placeholder="Type your name"><br>
   <input type="reset">
 </form>
-<h1> What type of shower do you use?</h1>
+<h2> What type of shower do you use?</h2>
      <img src="images/lowFlowShowerHead.jpg",  width = 40%, style="display:block;margin:auto"> 
+     <center>
+    <a href="https://rimstar.org/efficiency_conservation/low_flow_shower_head/04_low_flow_shower_head_annotated.jpg"> Image Source</a>
+    </center>
      <form>
      <input type="radio" id="lowFlow" name="showerType" value="1.5" checked="checked">
       <label for="lowFlow">Low Flow</label><br>
       <input type="radio" id="highFlow" name="showerType" value="2.5">
-      <label for="highFlow">High Flow</label><br>
-      <input type="radio" id="noShower" name="showerType" value="0">
-      <label for="noShower">I don't shower</label><br>
+      <label for="highFlow">High Flow</label><br>  
       </form> 
    
-    <h1> How long do you spend in shower on average?</h1>
-    <h3>Click Counter To increase</h3>
+    <h2> How long do you spend in shower on average?</h2>
+    <h3>Click Counter To Increase Time (Mins)</h3>
     <button id="clickToIncreaseShowerTime">+</button>
     <button id="clickToDecreaseShowerTime">-</button>
     <p id= "currentCountShowerTime"> Current Count is:  </p>
     <p id= "numberOfMins" ></p>
 
-     <h1> How often do you shower in a week?</h1>
+     <h2> How often do you shower in a week?</h2>
      <button id="clickToIncreaseShower">+</button>
       <button id="clickTodecreaseShower">-</button>
       <p id= "currentShowerCount"> Current Count is:  </p>
       <p id= "numberOfShowers" ></p>
-    <h1> How many times do you take baths in a week?</h1>
+    <h2> How many times do you take baths in a week?</h2>
     <button id="clickToIncreaseBaths">+</button>
       <button id="clickTodecreaseBaths">-</button>
       <p id= "currentBathCount"> Current Count is:  </p>
-     <input type="text" id="percentFilled" name="volumeOfTub" value="0"placeholder="How much do you fill your bath tub by as compared to a usual tub in % (for example, 1 is 100%)?"size="100"><br>
- <h1> For how long are your toilet sinks running in a day (This includes brushing, washing hands, ect.)?</h1>
- <input type="text" id="timeSinksAreRunning" name="sinkWaterUsage"placeholder="time in mins."><br>
-     <h1> How many times do you flush in a day?</h1>
+       <p id= "numberOfBaths" ></p>
+       <p> Percent of tub filled:</p>
+       <p> How much do you fill your bath tub by as compared to a usual tub in % (for example, 1 is 100%)?</p>
+     <input type="text" id="percentFilled" name="volumeOfTub" value= 1 placeholder="How much do you fill your bath tub by as compared to a usual tub in % (for example, 1 is 100%)?"size="100"><br>
+     <p id= "bathError"style="color:red"></p> 
+ <h2> For how long are your toilet sinks running in a day (This includes brushing, washing hands, ect.)?</h2>
+ <input type="text" id="timeSinksAreRunning" name="sinkWaterUsage"placeholder="Time in mins."><br>
+  <p id= "sinkError"style="color:red"></p> 
+     <h2> How many times do you flush in a day?</h2>
      <button id="clickToIncreaseFlush">+</button>
       <button id="clickTodecreaseFlush">-</button>
       <p id= "currentFlushCount"> Current Count is:  </p>
       <p id= "numberOfFlushes" ></p>
      <h1> How do you wash your dishes?</h1>
      <form>
-     <input type="radio" id="washMethord" name="washMethord" value="sinkWash">
+     <input type="radio" id="sinkWash" name="washMethord" value="1.5">
       <label for="sinkWash">Sink wash</label><br>
-      <input type="radio" id="washMethord" name="washMethord" value="dishWasher">
+
+      <input type="radio" id="dishWasher" name="washMethord" value="6">
+
       <label for="dishWasher">Dish Washer</label><br>
-      <input type="radio" id="washMethord" name="washMethord" value="none">
-      <label for="none">Not Applicable</label>
+      <input type="radio" id="noWash" name="washMethord" value="0">
+      <label for="noWash">Not Applicable</label>
       </form> 
     
       
-     <h1> How many times do you do laundry in a week?</h1>
+     <h2> How many times do you do laundry in a week?</h2>
      <button id="clickToIncreaseLaundry">+</button>
       <button id="clickTodecreaseLaundry">-</button>
       <p id= "currentLaundryCount"> Current Count is:  </p>
       <p id= "numberOfLaundry" ></p>
-     <h1> What is the size of your lawn (in m^2)? </h1>
-     <input type="text" id="sizeOfLawn"placeholder="Enter area in m^2" >
-      <h1> What is the volume of your swimming pool?</h1>
-      <input type="text" id="volume of swimmingPool" placeholder="Enter volume in gallons">
+      <input type="checkbox" id="eStarWashingMachine" name="eStarWashingMachine" >
+<label for="eStarWashingMachine"> My machine is energy star rated.</label><br>
+     <h2> What is the size of your lawn? </h2>
+     <input type="text" id="sizeOfLawn"placeholder="Enter area in square feet." >
+      <h1>Tell us a bit about your pool</h1>
+      <button id="rectPool"> Add rectangular pool</button>
+      <button id="rectPoolRemove"> Remove rectangular pool</button>
       <form>
-      <h1> What is your general diet?</h1> 
+      <p id="rectInputWidth">
+      <p id="rectInputHeight">
+      <p id="rectInputLength">
+      </form> 
+      <h3 id= "errorRectPool"> 
+      <button id="roundPool"> Add round pool</button>
+      <button id="roundPoolRemove"> Remove round pool</button>
+      <form>
+      <p id="diameterOfRoundPool">
+      <p id="roundInputHeight">
+   
+      </form> 
+      <h3 id= "errorRoundPool">
+      
+      <form>
+      <h2> What is your general diet?</h2> 
       <input type="radio" id="vegan" name="diet" value="vegan">
       <label for="vegan">Vegan</label><br>
       <input type="radio" id="vegetarian" name="diet" value="vegetarian">
@@ -96,8 +131,13 @@
     </form> 
     <br>
     <button id="done"> I am done!</button>
+    <h3 id= "headingOfResults"> 
+    <p id= "resultsOfQuiz"> 
+    <p id= "comparison"> 
     
-    <script src="scripts/resultOfQuiz.js"></script>
     <script src="scripts/waterQuiz.js"></script>
+    <script src="scripts/assertions.js"></script>
+    </center>   
   </body>
+  
 </html>

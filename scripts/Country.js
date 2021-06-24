@@ -1,3 +1,4 @@
+//Muhammad's file
 /**
  * This is the class used to create country objects for the map webpage
  * https://washdata.org/data/household#!/
@@ -14,12 +15,14 @@ class Country {
  * @param {number} markerY - The y coordinate on the map of the country's marker.
  */
   constructor(name, accessibilityUrban, accessibilityRural, markerX, markerY){
+    console.log("initializing country class variables")
     this.name = name
     this.accessibilityUrban = accessibilityUrban;
     this.accessibilityRural = accessibilityRural;
     this.markerX = markerX;
     this.markerY = markerY;
     this.displayed = false;
+    console.log("Initialized " + this.name + ", " + this.accessibilityUrban + ", " + this.accessibilityRural + ", " + this.markerX + ", " + this.markerY + ", " + this.displayed)
   }
 
 /**
@@ -32,6 +35,8 @@ class Country {
   checkMouseHover(mouseX, mouseY) {
     if (this.markerX - 5 < mouseX && (this.markerX + 13) > mouseX){
       if (this.markerY - 3 < mouseY && (this.markerY + 23) > mouseY){
+        console.clear()
+        console.log("Mouse is over the marker")
         return true
       }
     }

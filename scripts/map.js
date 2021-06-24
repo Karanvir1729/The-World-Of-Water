@@ -1,3 +1,4 @@
+//Southern countries by Karanvir and everything else by Muhammad
 var countries = [];
 const labels = document.getElementById("labels")
 const cursor = document.getElementById("cursor")
@@ -6,7 +7,9 @@ cursor.style.position = 'absolute';
 const markerContainer = document.getElementById("markers")
 const map = document.getElementById("map")
 const nav = document.getElementsByTagName("ul")
+const doubleClick = document.getElementById("doubleClick")
 
+console.log("Creating all country objects")
 //Each country object is created and added to an array
 var canada = new Country("Canada", 99.56, 98.88, 320, 202);
 countries.push(canada);
@@ -28,7 +31,7 @@ var germany = new Country("Germany", 100, 100, 751, 212);
 countries.push(germany)
 var poland = new Country("Poland", 99.85, 99.54, 789, 209);
 countries.push(poland)
-var czech = new Country("Czech", 99.90, 99.82, 776, 218);
+var czech = new Country("Czech", 99.90, 99.82, 776, 221);
 countries.push(czech)
 var norway = new Country("Norway", 100, 100, 752, 168)
 countries.push(norway)
@@ -38,23 +41,23 @@ var finland = new Country("Finland", 100, 100, 822, 157)
 countries.push(finland)
 var italy = new Country("Italy", 99.47, 99.38, 760, 244)
 countries.push(italy)
-var switzerland = new Country("Switzerland", 100, 100, 744, 229)
+var switzerland = new Country("Switzerland", 100, 100, 744, 232)
 countries.push(switzerland)
-var austria = new Country("Austria", 100, 100, 768, 226)
+var austria = new Country("Austria", 100, 100, 768, 232)
 countries.push(austria)
-var hungary = new Country("Hungary", 100, 100, 788, 229)
+var hungary = new Country("Hungary", 100, 100, 788, 232)
 countries.push(hungary)
 var romania = new Country("Romania", 100, 100, 809, 234)
 countries.push(romania)
-var greece = new Country("Greece", 100, 100, 798, 257)
+var greece = new Country("Greece", 100, 100, 798, 262)
 countries.push(greece)
-var bulgaria = new Country("Bulgaria", 99.47, 98.05, 808, 246)
+var bulgaria = new Country("Bulgaria", 99.47, 98.05, 808, 250)
 countries.push(bulgaria)
 var ukraine = new Country("Ukraine", 91.31, 99.37, 836, 216)
 countries.push(ukraine)
-var belarus = new Country("Belarus", 95.98, 98.30, 820, 200)
+var belarus = new Country("Belarus", 95.98, 98.30, 820, 210)
 countries.push(belarus)
-var lithuania = new Country("Lithuania", 99.84, 92.76, 805, 195)
+var lithuania = new Country("Lithuania", 99.84, 92.76, 805, 198)
 countries.push(lithuania)
 var united_kingdom = new Country("United Kingdom", 100, 100, 704, 202)
 countries.push(united_kingdom)
@@ -62,11 +65,11 @@ var iceland = new Country("Iceland", 100, 100, 638, 160)
 countries.push(iceland)
 var ireland = new Country("Ireland", 96.98, 98.10, 680, 205)
 countries.push(ireland)
-var moldova = new Country("Moldova", 97.01, 83.16, 825, 228)
+var moldova = new Country("Moldova", 97.01, 83.16, 825, 232)
 countries.push(moldova)
-var latvia = new Country("Latvia", 98.83, 98.18, 809, 189)
+var latvia = new Country("Latvia", 98.83, 98.18, 809, 192)
 countries.push(latvia)
-var estonia = new Country("Estonia", 99.95, 99.19, 814, 182)
+var estonia = new Country("Estonia", 99.95, 99.19, 814, 185)
 countries.push(estonia)
 var russia = new Country("Russia", 98.64, 98.62, 1075, 165)
 countries.push(russia)
@@ -82,6 +85,12 @@ var china = new Country("China", 97.71, 86.15, 1112, 283)
 countries.push(china)
 var turkmenistan = new Country("Turkmenistan", 100, 97.57, 945, 260)
 countries.push(turkmenistan)
+var slovenia = new Country("Slovenia", 99.65, 99.40, 773, 235)
+countries.push(slovenia)
+var croatia = new Country("Croatia", 99.57, 99.61, 779, 236)
+countries.push(croatia)
+var bosnia = new Country("Bosnia", 94.85, 97.33, 783, 242)
+countries.push(bosnia)
 var tajikistan = new Country("Tajikistan", 96.24, 75.64, 992, 261)
 countries.push(tajikistan)
 var iran = new Country("Iran", 97.39, 89.01, 928, 288)
@@ -104,7 +113,7 @@ var armenia = new Country("Armenia", 99.86, 100, 888, 255)
 countries.push(armenia)
 var nepal = new Country("Nepal", 86.04, 88.73, 1043, 302)
 countries.push(nepal)
-var slovakia = new Country("Slovakia", 99.61, 100, 790, 221)
+var slovakia = new Country("Slovakia", 99.61, 100, 790, 224)
 countries.push(slovakia)
 var south_korea = new Country("South Korea", 100, 100, 1217, 272)
 countries.push(south_korea)
@@ -188,8 +197,6 @@ var brazil = new Country("Brazil",89.74, 92.28 ,516, 508)
 countries.push(brazil)
 var uruguay = new Country("Uruguay",95.30, 94.59, 490, 547)
 countries.push(uruguay)
-
-//CHANGE THE WATER PERCENT VALUES 
 var south_africa = new Country("South Africa",90.7, 80.3, 802,532)
 countries.push(south_africa)//done 
 var madagascar = new Country("Madagascar",85.82, 67.23, 898,493)//done 
@@ -271,41 +278,49 @@ var liberia = new Country("Liberia",83.29,76.56 ,673, 394)
 countries.push(liberia)//done
 var sierra  = new Country("Sierra Leone",75.30, 74.59,665,388)
 countries.push(sierra )
-
-
 var guinea = new Country("Guinea",95.30, 94.59,661,378)
 countries.push(guinea)
 var guineaB = new Country("Guinea-Bissau",95.30, 94.59,651,370)
 countries.push(guineaB)
+
+console.log("Objects created, adding markers")
+//Adds markers to each of the countries location
 for(var i = 0; i < countries.length; i++){
   var marker = document.createElement("img");
   marker.src = "images/marker.png";
   marker.width = 16;
   marker.id = countries[i].name
   marker.style.position = 'absolute';
-  countries[i].markerY += 57
+  countries[i].markerY += 50
   marker.style.left = countries[i].markerX + "px";
   marker.style.top = countries[i].markerY + "px";
   marker.style.opacity = "0.25"
   markerContainer.appendChild(marker);
 };
 
+console.log("Checking if mosue is over country marker")
 document.addEventListener('mousemove', event => {
   cursor.style.position = "absolute"
   if (event.pageY >= 140){
     cursor.style.left = event.pageX + "px";
     cursor.style.top = event.pageY + "px";
   }
+  
+  //Checking if mouse is over a country marker
   for(var i = 0; i < countries.length; i++){
     if (countries[i].checkMouseHover(event.pageX, event.pageY)){
-
+      console.log("Mouse is over " + countries[i].name + ", displaying data")
       document.getElementById(countries[i].name).style.opacity = "1"
       if (labels.childElementCount < 1){
         const h1 = document.createElement("h1")
+          h1.style.textAlign = 'center'
         const data = document.createElement('p')
         h1.appendChild(document.createTextNode(countries[i].name))
+        var title = document.createTextNode("Percentage of Population with water")
         var urbanText = document.createTextNode("Urban: " + countries[i].accessibilityUrban + "%")
         var ruralText = document.createTextNode("Rural: " + countries[i].accessibilityRural + "%")
+        data.appendChild(title)
+        data.appendChild(document.createElement("br"))
         data.appendChild(urbanText)
         data.appendChild(document.createElement("br"))
         data.appendChild(ruralText)
@@ -326,13 +341,20 @@ document.addEventListener('mousemove', event => {
       }
     };
   };
+
+  if (event.target == doubleClick){
+    setTimeout(() => {doubleClick.style.display = "none"}, 200)
+  }
 });
 
 //Displays width of the window
 window.addEventListener('load', event =>{
+  console.log("Scaling map and markers on load")
   map.width = window.innerWidth
+  doubleClick.style.width = window.innerWidth + "px"
   map.height = window.innerWidth / 2
-
+  doubleClick.style.height = window.innerWidth / 2 + "px"
+  console.log(doubleClick.style.width)
   var scaleX = map.width / 1425
   var scaleY = map.height / 713
   for (var i=0; i<countries.length; i++){
@@ -347,6 +369,7 @@ window.addEventListener('load', event =>{
 });
 
 window.addEventListener('resize', event =>{ 
+  console.log("scaling maps and markers on resize")
   var scaleX = window.innerWidth / map.width
   var scaleY = (window.innerWidth / 2) / map.height
   for (var i=0; i<countries.length; i++){
@@ -354,22 +377,19 @@ window.addEventListener('resize', event =>{
     countries[i].markerX *= scaleX
     countries[i].markerY *= scaleY
     countries[i].markerY += map.y
-    console.log(map.y)
     document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
     document.getElementById(countries[i].name).style.top = countries[i].markerY + "px"
   }
   map.width = window.innerWidth
   map.height = window.innerWidth / 2
 });
-document.addEventListener('click', event => {
-  console.log(event.pageX - 6, event.pageY - 80);
-});
 
 document.addEventListener('dblclick', event => {
   if (map.style.zoom != 2){
+    console.log("Zooming map in")
     map.style.zoom = 2
     window.scrollTo(event.pageX * 2 - window.innerWidth / 2, event.pageY*2 - window.innerHeight / 2)
-  
+    //Adjusts all marker position
     for (i = 0; i < countries.length; i++){
       countries[i].markerX *= 2
       countries[i].markerY *= 2
@@ -378,8 +398,10 @@ document.addEventListener('dblclick', event => {
       document.getElementById(countries[i].name).style.left = countries[i].markerX + "px"
     }
   } else {
+    console.log("Zooming map out")
     map.style.zoom = 1
     window.scrollTo(event.pageX / 2 - window.innerWidth / 2, event.pageY / 2 - window.innerHeight / 2)
+    //Adjusts marker position
     for (i = 0; i < countries.length; i++){
       countries[i].markerY += 114
       countries[i].markerX *= 0.5
@@ -389,9 +411,3 @@ document.addEventListener('dblclick', event => {
     }
   }
 });
-
-//The main program loop, loops every frame
-setInterval(function() {
-
-}, 16.67);
-//https://www.tutorialrepublic.com/faq/how-to-detect-screen-resolution-with-javascript.php#:~:text=Answer%3A%20Use%20the%20window.,on%20click%20of%20the%20button.

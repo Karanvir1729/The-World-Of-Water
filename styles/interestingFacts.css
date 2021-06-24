@@ -1,25 +1,29 @@
-html{
-  padding: 70px;
-  border: 20px solid rgb(243, 199, 76)
-}
-
 h2 {
   font-size: 500%;
   color: blue;
   text-align: center;
+  padding-left: 70px;
 }
 
 h3 {
   font-size: 300%;
   color: blueviolet;
   text-align: left;
+  padding-left: 70px;
 }
 
 p{
   font-size: 200%;
   color: black;
   text-align: center;
+  padding-left: 70px;
 }
+
+
+/*
+ Originally form: https://codepen.io/ksksoft/pen/xsnmp
+ Edited by: Karanvir Khanna
+*/
 figure {
   background-color: white;
   display: block;
@@ -74,22 +78,10 @@ circle {
 @keyframes pie2 {
   50%,100% {stroke-dasharray: 0,40,90,90;}
 }
-
-#highlight{
-  color: white;
-  opacity: 50%;
-  animation: moveHighlight 2s infinite;
-  transform: translate (0%);
-  animation-iteration-count: infinite;
-}
-@keyframes moveHighlight{
-  
-  0%   {background-color:red; transform: translate(0%);}
-  
-  50%  {background-color:red; transform: translate(200%) ;}
-  75%  {background-color:red; transform: translate(200%) ;}
-  100% {background-color:red; transform:translate(0%);}
-}
+/*
+Original idea form: https://stackoverflow.com/questions/29738787/filling-water-animation
+Edited by: Karanvir Khanna
+*/
 
 #banner {
   width: 300px;
@@ -119,7 +111,5 @@ circle {
   }
 }
 
-.stressMap{
-  position: relative;
-  
-}
+
+
